@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>rock-group</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/layout\styles\layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+<!-- Header -->
+<div class="bgded" style="background-image:url('/images/backgrounds/fon.jpg');"> 
+  <div class="wrapper overlay">
+    <header id="header" class="hoc clear">
+      <nav id="mainav" class="clear"> 
+        <ul class="clear">
+          <li class="active"><a  href="index.html">О группе</a></li>
+           <li><a class="drop" href="merch.html">Мерч</a>
+            <ul>
+              <li><a href="merch.html">Футболки</a></li>
+              <li><a href="merch.html">Акссесуары</a></li>
+              <li><a href="merch.html">Шапки</a></li>
+            </ul>
+          </li>
+           <li><a href="">Модуль 4</a>
+            <ul>
+              <li><a href="/lab11/task1.html">Лабораторная работа №11</a><ul>
+                <li> <a href="/lab11/task1.html">Задание 1</a></li>
+                <li><a href="/lab11/task2.html">Задание 2 </a></li>
+            </ul></li>
+              <li><a href="/pages/concert.html">Лабораторная работа №12</a>
+                <ul>
+                  <li> <script src="/lab12.js"></script><a href="#" onclick="openNewWindow(); return false;">Открыть новое окно</a></li>
+                  <li> <a href="/pages/concert.html">Задание 2-3</a></li>
+              </ul>
+              </li>
+              <li><a href="">Лабораторная работа №13</a>
+              <ul>
+                <li> <a href="/pages/map.html">Задание 1</a></li>
+                <li><a href="/lab13/lab13-2.html">Задание 2 </a></li>
+            </ul></li>
+              <li><a href="/pages/diagram.html">Лабораторная работа №14</a></li>
+            </ul></li>
+           <li><a href="err404.html">Видео</a></li>
+          <li><a href="concert.html">Билеты </a></li>
+          <li><a href="err404.html">Контакты</a></li>
+        </ul>
+
+      </nav>
+      <div id="logo"> 
+        <h1><a href="index.html">Rocker Label</a></h1>
+
+      </div>
+    </header>
+  </div>
+
+
+<!-- CSS - анимация-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #pageintro {
+      text-align: center;
+      margin: 50px auto;
+    }
+
+    .introtxt p {
+      transform: scale(0.9);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .introtxt p:hover {
+      transform: scale(1);
+    }
+
+    footer .btn {
+      transform: rotate(-15deg);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    footer .btn:hover {
+      transform: rotate(0);
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .heading {
+      animation: slideIn 1s forwards;
+    }
+  </style>
+
+<!-- Колонка "Новости" -->
+
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+      <div class="introtxt">
+        <h2 class="heading">НОВОСТИ</h2>
+        <p>В марте 2024 года Rocker Label отправится в большой тур по стране.
+
+          Вуду-панк врывается на танцполы и заражает города своим ядерным слэмом!
+          Самые взрывоопасные хиты группы, атмосфера братства и Вуду, новый мерч, а также старые добрые трэш и угар.
+          Всё это мы вам гарантируем!
+          <br>
+          <h1>Да пребудет с вами Барон Суббота!</h1></p>
+      </div>
+      <footer>
+        <ul class="nospace inline pushright">
+          <li><a class="btn inverse" href="err404.html">Контакты</a></li>
+          <li><a class="btn" href="concert.html">Билеты </a></li>
+        </ul>
+      </footer>
+    </article>
+  </div>
+</div>
+
+
+<!-- Колонка с Музыкой -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="center btmspace-50">
+      <h2 class="heading">Музыка</h2>
+      <p>"Панк — это переходить границы и творить не по правилам. Вот это панк. Панк так и есть, на самом деле."-Горшок</p>
+    </div>
+    <ul class="nospace group blocks">
+      <li class="one_quarter first bgded overlay" style="background-image:url('/images/2r2r.jpg');"><a class="btn medium" href="https://music.yandex.kz/album/8379305">Послушать</a><br>
+         Альбом "2rbina2rista"</li>
+      <li class="one_quarter bgded overlay" style="background-image:url('/images/Brut.jpg');"><a class="btn medium" href="https://music.yandex.kz/album/6370035">Послушать</a><br>
+        Альбом "Бруталити" </li>
+      <li class="one_quarter bgded overlay" style="background-image:url('/images/mama\,i.pank.jpg');"><a class="btn medium" href="https://music.yandex.kz/album/25521254">Послушать</a><br>
+        Альбом "Мама, я-панк"</li>
+      <li class="one_quarter bgded overlay" style="background-image:url('/images/NR.jpg');"><a class="btn medium" href="https://music.yandex.kz/album/6370040">Послушать</a><br>
+        Альбом "Nuclear Rap"</li>
+    </ul>
+    <div class="clear"></div>
+  </main>
+</div>
+
+
+
+<!-- Колонка с Цитатами -->
+<div class="bgded overlay" style="background-image:url('/images/backgrounds/fon1.jpg');">
+  <section id="testimonials" class="hoc container clear"> 
+    <div class="center btmspace-50">
+      <h2 class="heading">Цитаты</h2>
+    </div>
+    <ul class="nospace group">
+      <li class="one_half first">
+        <div class="clear"><img src="/images/RG.jpg" alt=""> <span class="block"><strong>Рэнто Гарсиа</strong></span>
+          <blockquote>"Не нравится — не ешь! Но и не лезь в мою тарелку!..."</blockquote>
+        </div>
+      </li>
+      <li class="one_half">
+        <div class="clear"><img src="/images/RG1.jpg" alt=""> <span class="block"><strong>Рэнто Гарсиа</strong></span>
+          <blockquote>"Всё, что нас не убивает, делает калеками!..."</blockquote>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+
+
+
+<!-- Колонка с концертами -->
+<div class="wrapper row3">
+  <section class="hoc container clear"> 
+    <div class="center btmspace-50">
+      <h2 class="heading">Концертный тур</h2>
+
+    </div>
+    <ul class="nospace elements">
+      <li class="one_third first">
+        <article><a href="err404.html"><img src="/images/con1.jpg" alt=""></a>
+          <div class="txtwrap">
+            <h6 class="heading">Город Петропавловск </h6>
+            <time datetime="2024-03-21">21 марта 2024</time>
+            <p>Место проведение : <br>
+            Ирландский паб "Dublin"<br>
+            Улица Казахстанской правды,94
+            </p>
+            <footer><a href="err404.html">Узнать больше &raquo;</a></footer>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="err404.html"><img src="/images/con2.jpg" alt=""></a>
+          <div class="txtwrap">
+            <h6 class="heading">Город Петропавловск </h6>
+            <time datetime="2024-03-21">30 марта 2024</time>
+            <p>Место проведение : <br>
+            трц"City Mall" 2 этаж<br>
+            Улица Валиханова, 56
+            </p>
+            <footer><a href="err404.html">Узнать больше &raquo;</a></footer>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="err404.html"><img src="/images/con3.jpg" alt=""></a>
+          <div class="txtwrap">
+            <h6 class="heading">Город Петропавловск </h6>
+            <time datetime="2024-03-21">06 апреля 2024</time>
+            <p>Место проведение : <br>
+             трц "DOSTYQ mall" 2 этаж<br>
+            Улица Магжана Жумабаева, 91
+            </p>
+            <footer><a href="err404.html">Узнать больше  &raquo;</a></footer>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+</div>
+
+
+<!-- Footer -->
+
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <div class="one_quarter first">
+      <h6 class="title">Сотрудничество </h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-envelope-o"></i> Spectral15@gmail.com</li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Слушай нас </h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Яндекс Музыка</a></li>
+        <li><a href="#">YouTube Music</a></li>
+        <li><a href="#">Spotify</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Подписывайся</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Инстаграмм</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Вконтакте</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">© 2024 Rocker Label</h6>
+    
+    </div>
+
+  </footer>
+</div>
+
+
+
+</body>
+</html>
