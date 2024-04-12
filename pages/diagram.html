@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Диаграмма распределения учащихся из стран СНГ</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Дневная форма обучения', 'Заочная форма обучения', 'Учащиеся на больничном'],
+                datasets: [{
+                    label: 'Количество учащихся из Казахстана',
+                    data: [10000, 3450 , 400], // Примерные данные, так как сайт не открывается 
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)'
+                    ],
+                    borderColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                animation: {
+                    duration: 2000, // Длительность анимации
+                    easing: 'easeInOutQuart' // Вид анимации
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            label += tooltipItem.yLabel + ' учащихся';
+                            return label;
+                        }
+                    }
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function(value) {
+                                return value.toLocaleString(); 
+                            }
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+<body>
+    <div class="container">
+        <canvas id="myChart" width="400" height="400"></canvas>
+
+        <a href="index.html" class="button">Вернуться на главную</a>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    display: block;
+    width: 200px; /* Ширина кнопки */
+    padding: 10px 20px; /* Внутренние отступы */
+    margin: 20px auto 0; /* Верхний отступ, автоматическое выравнивание по центру по горизонтали */
+    text-align: center; /* Выравнивание текста по центру */
+    color: #fff; /* Цвет текста */
+    background-color: #007bff; /* Цвет фона кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругляем углы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Изменяем указатель при наведении */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Новый цвет фона при наведении */
+}
+    </style>
+</body>
+</body>
+</html>

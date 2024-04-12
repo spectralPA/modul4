@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Карта с замками во Франции</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 707" width="1000" height="707">
+        <image href="fr.svg" width="1000" height="707" />
+        
+        <!-- Маркеры -->
+        <g id="markers">
+            <circle id="chambord" cx="765" cy="290" r="5" fill="red" />
+            <circle id="chensonso" cx="600" cy="270" r="5" fill="red" />
+            <circle id="fougeres" cx="515" cy="110" r="5" fill="red" />
+            <circle id="versailles" cx="600" cy="400" r="5" fill="red" />
+        </g>
+    </svg>
+
+    <div id="tooltip" style="position: absolute; display: none; background-color: white; padding: 5px; border: 1px solid black; pointer-events: none;"></div>
+
+    <script>
+        const markers = {
+            chambord: {
+                title: "Замок Шамбор",
+                description: "Прекрасный ренессансный замок, построенный Франциском I"
+            },
+            chensonso: {
+                title: "Замок Шенсонсо",
+                description: "Исторический замок с богатой архитектурой и садами"
+            },
+            fougeres: {
+                title: "Замок Фужере",
+                description: "Крепость и замок с богатой историей и архитектурой"
+            },
+            versailles: {
+                title: "Замок Версаль",
+                description: "Один из самых известных замков в мире, символ французской монархии"
+            }
+        };
+
+        // Функция для отображения информации о замке при наведении на маркер
+        function showInfo(markerId, x, y) {
+            const marker = markers[markerId];
+            const tooltip = document.getElementById("tooltip");
+            tooltip.innerHTML = `<b>${marker.title}</b><br>${marker.description}`;
+            tooltip.style.left = x + "px";
+            tooltip.style.top = (y - 30) + "px";
+            tooltip.style.display = "block";
+        }
+
+        // Функция для скрытия информации при уходе курсора с маркера
+        function hideInfo() {
+            const tooltip = document.getElementById("tooltip");
+            tooltip.style.display = "none";
+        }
+
+        // Добавляем обработчики событий для маркеров
+        document.getElementById("chambord").addEventListener("mouseover", function(e) {
+            showInfo("chambord", e.clientX, e.clientY);
+        });
+        document.getElementById("chambord").addEventListener("mouseout", hideInfo);
+
+        document.getElementById("chensonso").addEventListener("mouseover", function(e) {
+            showInfo("chensonso", e.clientX, e.clientY);
+        });
+        document.getElementById("chensonso").addEventListener("mouseout", hideInfo);
+
+        document.getElementById("fougeres").addEventListener("mouseover", function(e) {
+            showInfo("fougeres", e.clientX, e.clientY);
+        });
+        document.getElementById("fougeres").addEventListener("mouseout", hideInfo);
+
+        document.getElementById("versailles").addEventListener("mouseover", function(e) {
+            showInfo("versailles", e.clientX, e.clientY);
+        });
+        document.getElementById("versailles").addEventListener("mouseout", hideInfo);
+    </script>
+    <a href="index.html" class="button">Вернуться на главную</a>
+</div>
+<style>
+    body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+}
+
+.button {
+display: block;
+width: 200px; /* Ширина кнопки */
+padding: 10px 20px; /* Внутренние отступы */
+margin: 20px auto 0; /* Верхний отступ, автоматическое выравнивание по центру по горизонтали */
+text-align: center; /* Выравнивание текста по центру */
+color: #fff; /* Цвет текста */
+background-color: #ff0000; /* Цвет фона кнопки */
+border: none; /* Убираем границу */
+border-radius: 5px; /* Закругляем углы */
+font-size: 16px; /* Размер шрифта */
+cursor: pointer; /* Изменяем указатель при наведении */
+transition: background-color 0.3s; /* Плавное изменение цвета фона */
+}
+
+.button:hover {
+background-color: #000000; /* Новый цвет фона при наведении */
+}
+</style>
+</body>
+</html>

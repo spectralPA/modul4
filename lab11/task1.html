@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вычисление выражения</title>
+</head>
+<body>
+<H1>Задание 1 </H1>
+
+    <div id="xExplanation">Введите целые числа </div>
+    <label for="x">Введите значение x:</label>
+    <input type="number" id="x" name="x">
+    
+    <br>
+    <label for="y">Введите значение y:</label>
+    <input type="number" id="y" name="y">
+
+    <br>
+    <label for="z">Введите значение z:</label>
+    <input type="number" id="z" name="z">
+    
+    <br>
+    <button onclick="calculate()">Вычислить</button>
+    <p id="result"></p>
+
+    <script>
+        function max2(a, b) {
+            return a > b ? a : b;
+        }
+
+        function calculate() {
+            var x = document.getElementById('x').value;
+            var y = document.getElementById('y').value;
+            var z = document.getElementById('z').value;
+
+            if (!(/^\d+$/.test(x) && /^\d+$/.test(y) && /^\d+$/.test(z))) {
+                alert('Алярм , вы ввели не целое число!!! Пожалуйста введите целое число ');
+                return;
+            }
+
+            x = parseFloat(x);
+            y = parseFloat(y);
+            z = parseFloat(z);
+
+            var result = max2(x + y + z / 2, x * y * z) + 1;
+            document.getElementById('result').textContent = "Результат: " + result;
+        }
+    </script>
+<a href="task2.html"><button>Перейти на Задание 2</button></a>
+</body>
+</html>

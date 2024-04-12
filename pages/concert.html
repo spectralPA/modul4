@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rocker label</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="top">
+</body>  
+
+<!-- Header -->
+    <div class="bgded" style="background-image:url('../images/backgrounds/fon.jpg');"> 
+      <div class="wrapper overlay">
+        <header id="header" class="hoc clear">
+          <nav id="mainav" class="clear"> 
+            <ul class="clear">
+              <li class="active"><a  href="index.html">О группе</a></li>
+               <li><a class="drop" href="merch.html">Мерч</a>
+                <ul>
+                  <li><a href="merch.html">Футболки</a></li>
+                  <li><a href="merch.html">Акссесуары</a></li>
+                  <li><a href="merch.html">Шапки</a></li>
+                </ul>
+              </li>
+               <li><a href="">Модуль 4</a>
+                <ul>
+                  <li><a href="/lab11/task1.html">Лабораторная работа №11</a><ul>
+                    <li> <a href="/lab11/task1.html">Задание 1</a></li>
+                    <li><a href="/lab11/task2.html">Задание 2 </a></li>
+                </ul></li>
+                  <li><a href="/pages/concert.html">Лабораторная работа №12</a>
+                    <ul>
+                      <li> <script src="/lab12.js"></script><a href="#" onclick="openNewWindow(); return false;">Открыть новое окно</a></li>
+                      <li> <a href="/pages/concert.html">Задание 2-3</a></li>
+                  </ul>
+                  </li>
+                  <li><a href="">Лабораторная работа №13</a>
+                  <ul>
+                    <li> <a href="/pages/map.html">Задание 1</a></li>
+                    <li><a href="/lab13/lab13-2.html">Задание 2 </a></li>
+                </ul></li>
+                  <li><a href="/pages/diagram.html">Лабораторная работа №14</a></li>
+                </ul></li>
+               <li><a href="err404.html">Видео</a></li>
+              <li><a href="concert.html">Билеты </a></li>
+              <li><a href="err404.html">Контакты</a></li>
+            </ul>
+    
+          </nav>
+          <div id="logo"> 
+            <h1><a href="index.html">Rocker Label</a></h1>
+    
+          </div>
+        </header>
+      </div>
+
+
+<!-- Форма покупки билета-->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="content"> 
+      <div class="scrollable"></div>
+      <div id="comments">
+
+        <script>
+          function UserData() {
+              this.Имя = "";
+              this.email = "";
+              this.Пол = "";
+              this.Подписка = false;
+              this.Комментарий = "";
+          }
+  
+          var userData = new UserData();
+  
+          function saveData() {
+              userData.Имя = document.getElementById('name').value;
+              userData.email = document.getElementById('email').value;
+              userData.Пол = document.getElementById('gender').value;
+              userData.Подписка = document.getElementById('subscribe').checked;
+              userData.Комментарий = document.getElementById('comments').value;
+              alert("Данные сохранены.");
+          }
+  
+          function displayData() {
+              var dataContainer = document.getElementById('dataContainer');
+              dataContainer.innerHTML = "";
+              for (var key in userData) {
+                  if (userData.hasOwnProperty(key)) {
+                      dataContainer.innerHTML += "<p><strong>" + key + ":</strong> " + userData[key] + "</p>";
+                  }
+              }
+          }
+      </script>
+  </head>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f0f0f0;
+          color: #333;
+      }
+  
+      h1 {
+          text-align: center;
+          margin-top: 20px;
+      }
+  
+      form {
+          max-width: 400px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      label {
+          display: block;
+          margin-bottom: 5px;
+      }
+  
+      input[type="text"],
+      input[type="email"],
+      textarea {
+          width: 100%;
+          padding: 5px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+      }
+  
+      select {
+          width: 100%;
+          padding: 5px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+      }
+  
+      button {
+          padding: 5px 10px;
+          background-color: #a80000;
+          color: #fff;
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+      }
+  
+      button:hover {
+          background-color: #a80000;
+      }
+  
+      #dataContainer {
+          max-width: 400px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      #dataContainer p {
+          margin-bottom: 10px;
+      }
+  
+      #dataContainer p:last-child {
+          margin-bottom: 0;
+      }
+  </style>
+  </head>
+  <body>
+  <h1>Покупка билета</h1>
+  <form>
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name"><br>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br>
+  
+      <label for="gender">Пол:</label>
+      <select id="gender" name="gender">
+          <option value="male">Мужской</option>
+          <option value="female">Женский</option>
+      </select><br>
+  
+      <label for="subscribe">Подписаться на рассылку:</label>
+      <input type="checkbox" id="subscribe" name="subscribe"><br>
+      
+  
+      <label for="comments">Комментарии:</label>
+      <textarea id="comments" name="comments"></textarea><br>
+  
+      <button type="button" onclick="saveData()">Сохранить данные</button>
+      <br>
+      <button type="button" onclick="displayData()">Показать данные</button>
+  </form>
+  
+  <div id="dataContainer"></div>
+    
+  </main>
+</div>
+
+
+
+
+<!--  Footer -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <div class="one_quarter first">
+      <h6 class="title">Сотрудничество </h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-envelope-o"></i> Spectral15@gmail.com</li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Слушай нас </h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Яндекс Музыка</a></li>
+        <li><a href="#">YouTube Music</a></li>
+        <li><a href="#">Spotify</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">Подписывайся</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Инстаграмм</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Вконтакте</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="title">© 2024 Rocker Label</h6>
+    
+    </div>
+
+  </footer>
+</div>
+
+
+</body>
+</html>
